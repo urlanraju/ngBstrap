@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="ml-auto">
+        <app-logo
+          class="logo-springboot"
+          logo-url="../../../assests/img/spring-boot.png"
+        />
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="register-card mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+          Create Account
+        </h2>
+        <br />
+        <form [formGroup]="userForm" (ngSubmit)="registerUser()">
+          <div class="row">
+            <div class="col-sm-6">
+              <label
+                for="firstName"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >First Name</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your First name"
+                class="form-input"
+                required
+                formControlName="firstName"
+              />
+            </div>
+            <div class="col-sm-6">
+              <label
+                for="lastName"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your Last name"
+                class="form-input"
+                required
+                formControlName="lastName"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                class="form-input"
+                required
+                formControlName="email"
+              />
+            </div>
+            <div class="col-sm-6">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >Phone number</label
+              >
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="Enter your Phone number"
+                class="form-input"
+                required
+                formControlName="phone"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <label
+                for="password"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                class="form-input"
+                required
+                formControlName="password"
+              />
+            </div>
+            <div class="col-sm-6">
+              <label
+                for="confirmPassword"
+                class="block text-gray-700 text-sm font-medium mb-2"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                id="rePassword"
+                name="rePassword"
+                placeholder="Confirm your password"
+                class="form-input"
+                required
+                formControlName="rePassword"
+              />
+              @if (userForm.invalid) {
+                <ngb-alert type="danger" >Invalid field</ngb-alert>
+              }
+            </div>
+          </div>
+          <div class="row">
+            <button
+              [disabled]="userForm.invalid"
+              type="submit"
+              class="register-button"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-gray-600 text-sm mt-4">
+          Already have an account?
+          <a routerLink="/auth/login" class="text-blue-600 hover:underline"
+            >Log In</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="mr-auto logo-angular">
+        <app-logo
+          class="logo-angular"
+          logo-url="../../../assests/img/angular.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>

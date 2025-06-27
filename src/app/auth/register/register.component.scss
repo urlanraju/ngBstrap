@@ -1,0 +1,55 @@
+/* Custom styling for the registration form for better aesthetics */
+.register-card {
+    background-color: white;
+    border-radius: 1rem;
+    /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    padding: 2.5rem;
+    /* Ample padding */
+    max-width: 650px;
+    /* Max width for readability */
+    width: 90%;
+    /* Fluid width for responsiveness */
+    margin-top: 3%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    /* Light border */
+    border-radius: 0.5rem;
+    /* Rounded input fields */
+    margin-bottom: 1rem;
+    outline: none;
+    /* Remove default outline */
+    transition: border-color 0.2s;
+    /* Smooth transition */
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    /* Blue border on focus */
+}
+
+.register-button {
+    width: 25%;
+    padding: 0.75rem 1rem;
+    background-color: #10b981;
+    /* Green button */
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    margin-left: 38%;
+}
+
+button.register-button:disabled,
+button.register-button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}

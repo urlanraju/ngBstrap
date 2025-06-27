@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="ml-auto">
+        <app-logo class="logo-springboot" logo-url="../../../assests/img/spring-boot.png" />
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="login-card mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Login</h2>
+        <br />
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <div class="mb-4">
+            <label
+              for="username"
+              class="block text-gray-700 text-sm font-medium mb-2"
+              >Username</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              class="form-input"
+              required
+              formControlName="username"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="password"
+              class="block text-gray-700 text-sm font-medium mb-2"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              class="form-input"
+              required
+              formControlName="password"
+            />
+          </div>
+          <button type="submit" class="login-button">Log In</button>
+        </form>
+        <p class="text-center text-gray-600 text-sm mt-4">
+          Don't have an account?
+          <a routerLink="/auth/signup" class="text-blue-600 hover:underline"
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="mr-auto logo-angular">
+        <app-logo class="logo-angular" logo-url="../../../assests/img/angular.png" />
+      </div>
+    </div>
+  </div>
+</div>
